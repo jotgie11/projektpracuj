@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portal Pracodawcy</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script src = "script.js">
+		/*fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Gliwice?unitGroup=metric&key=Q85TJ7LJ5EGQMRJY7BAGXZ42G&contentType=json", {
+  method: 'GET', 
+  headers: {
+ 
+  },
+           
+}).then(response => {
+  if (!response.ok) {
+    throw response; 
+  }
+            
+  return response.json(); 
+
+}).then(response => {
+  
+  pogoda(response);
+
+}).catch((errorResponse) => {
+  if (errorResponse.text) { 
+    errorResponse.text().then( errorMessage => {
+      
+    })
+  } else {
+   
+  } 
+});
+*/
+	</script>
+</head>
+<body>
+	<nav>
+		<div id = "menu">
+			<ul>
+				<li><a href = "#">Strona główna</a></li>
+				<li><a href = "#">Galeria</a></li>
+				<li><a href = "#">Kontakt</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id = "pogoda">
+	</div>
+  <h1>Dodaj ofertę pracy:</h1>
+  <div id = "addform">
+  <form onsubmit="return validateForm()">
+    <label for="stanowisko">Stanowisko:</label>
+    <input type="text" id="stanowisko" required><br><br>
+
+    <label for="placa">Płaca:</label>
+    <input type="number" id="placa" required><br><br>
+
+    <button type="submit">Dodaj</button>
+  </form>
+  </div>
+  <div id = "yyy"></div>
+  <h2>Twoje oferty pracy:</h2>
+  <div id="output">
+  </div>
+  <div id = "cleardata">
+  <button onclick="clearFormData()">Wyczyść oferty pracy</button>
+  </div>
+  <script>
+    displayFormData();
+    weather();
+  </script>
+</body>
+</html>
